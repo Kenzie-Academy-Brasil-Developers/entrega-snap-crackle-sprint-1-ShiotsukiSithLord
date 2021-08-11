@@ -1,13 +1,14 @@
 function snapCrackle(maxv) {
-    let numero = [];
+    let numero = "";
     let vazio =  "snap";
     let vazio2 = "Crackle";
-    let teste =  ", ";
+    let teste =  " ";
     
     for( i = 1; i < maxv; i++) {
-       numero += teste;
+        
+       
         if(i%2 !== 0){
-           numero += " " + vazio;
+           numero +=  vazio;
          
         }
         if( i%5 == 0){
@@ -18,15 +19,19 @@ function snapCrackle(maxv) {
             
         }
         if(i%2 == 0 & i%10 !== 0) {
-        numero += i;
+        numero += i ;
         }
-        
+        if( i < maxv - 1){
+            numero = numero + "," + teste;
+        }
        
         
         
     }
     return numero
 
-console.log
+
 }
-snapCrackle()
+console.log(snapCrackle(21))
+
+
